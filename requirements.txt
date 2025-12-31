@@ -9,7 +9,7 @@ ftfy
 wheel
 psutil
 ninja
-diffusers==0.35.0
+diffusers>=0.35.0
 clip@git+https://github.com/openai/CLIP.git
 gradio==5.50
 image-reward
@@ -27,7 +27,7 @@ sentencepiece
 tensorboard
 tensorboardX
 timm==0.6.13
-transformers==4.57.0
+transformers
 wandb
 webdataset
 yapf
