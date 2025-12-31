@@ -1,13 +1,5 @@
 module.exports = {
   run: [
-    // Clone Sana repository (needed for SanaPipeline)
-    {
-      method: "fs.download",
-      params: {
-        uri: "https://github.com/NVlabs/Sana.git",
-        path: "Sana"
-      }
-    },
     // Install all dependencies from requirements.txt first
     {
       method: "shell.run",
