@@ -1,0 +1,9 @@
+diffusers
+transformers
+accelerate
+peft
+einops
+omegaconf
+gradio==5.50
+pillow
+
