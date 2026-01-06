@@ -56,15 +56,6 @@ def load_model():
             pipe.vae.to(DTYPE)
             pipe.text_encoder.to(DTYPE)
         
-        # Enable CPU offload for low VRAM situations (CUDA only)
-        if DEVICE == "cuda":
-            try:
-                # Only enable if needed - you can uncomment this for low VRAM
-                # pipe.enable_model_cpu_offload()
-                pass
-            except Exception as e:
-                print(f"Note: CPU offload not enabled: {e}")
-        
         print(f"Model loaded successfully on {DEVICE}!")
     return pipe
 
