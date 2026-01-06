@@ -7,10 +7,13 @@ import os
 def get_device():
     if torch.cuda.is_available():
         return "cuda"
-    elif hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
-        return "mps"
-    else:
-        return "cpu"
+    try:
+        if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+            return "mps"
+    except Exception as e:
+        # Fallback safely if MPS availability check fails on some PyTorch versions
+        print(f"Warning: MPS detection failed, falling back to CPU: {e}")
+    return "cpu"
 
 DEVICE = get_device()
 print(f"Using device: {DEVICE}")
