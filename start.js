@@ -11,7 +11,7 @@ module.exports = {
         ],
         on: [{
           // Monitor for the HTTP URL pattern
-          "event": "/(http:\\/\\/[0-9.:]+)/",
+          "event": "/(http:\\/\\/[0-9.]+:[0-9]+)/",
           "done": true
         }]
       }
