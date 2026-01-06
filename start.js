@@ -20,7 +20,7 @@ module.exports = {
       // Set the local 'url' variable for pinokio.js to display "Open WebUI"
       method: "local.set",
       params: {
-        // input.event[1] captures the URL from the regex parenthesis group
+        // input.event[1] captures the URL from the regex capture group
         url: "{{input.event[1]}}"
       }
     },
