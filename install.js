@@ -55,8 +55,8 @@ module.exports = {
         uri: "torch.js",
         params: {
           venv: "env",
-          xformers: false,
-          triton: false
+          xformers: true,
+          triton: true
         }
       }
     },
